@@ -2,8 +2,8 @@ from pygame import *
 import math
 import random
 
-windowY = 9 * 60
-windowX = 16 * 60
+windowY = 18 * 60
+windowX = 32 * 60
 
 init()
 window = display.set_mode((windowX, windowY))
@@ -185,7 +185,7 @@ def show_backdrop(speed):
     y = ground - math.ceil(scale * rect.width) + 10
 
     draw.rect(window, colours['clouds'], [0, y + 14, windowX, windowY - y])
-    draw.rect(window, colours['grass'], [0, y - 450, windowX, windowY - y])
+    draw.rect(window, colours['grass'], [0, y - 1000, windowX, windowY - y])
     draw.rect(window, colours['grass'], [0, y + 200, windowX, windowY - y])
 
     for x in range(len(backdrops)):
